@@ -1,0 +1,10 @@
+/* ============================================= */
+/*              Card                             */
+/* ============================================= */
+
+.card {
+    @include flexy($just: space-around);
+    border: 1px solid $border;
+    border-radius: 5px;
+    padding: 10px;
+}

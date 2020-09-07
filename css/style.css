@@ -340,18 +340,97 @@ template {
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.title,
+.name {
+  font-weight: 300;
+}
+
+.email,
+.address,
+.phone-number,
+.birthday {
+  font-weight: 200;
+}
+
 /* ============================================= */
 /*              Body                             */
 /* ============================================= */
+body {
+  position: relative;
+  padding: 30px 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 35px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+  width: 375px;
+  margin: 8% auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 30px 20px;
+  box-shadow: 0 0 10px #505050;
+}
+
+.hidden {
+  display: none;
+}
+
 /* ============================================= */
-/*              Header                          */
+/*              Card                             */
 /* ============================================= */
+.card {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 /* ============================================= */
 /*              Button                           */
 /* ============================================= */
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
+.avatar {
+  border-radius: 50%;
+}
+
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
@@ -364,5 +443,15 @@ template {
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

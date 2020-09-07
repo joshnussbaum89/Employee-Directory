@@ -1,3 +1,15 @@
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
+
+@media (min-width: $md) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: $lg) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
