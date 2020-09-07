@@ -12,6 +12,7 @@ const modalNav = document.querySelector('.modal-nav');
 const modalClose = document.querySelector('.modal-close');
 const modalLeft = document.querySelector('.modal-left');
 const modalRight = document.querySelector('.modal-right');
+const searchBar = document.getElementById('searchBar');
 let index = 0;
 
 // Fetch data from API
@@ -53,7 +54,7 @@ function displayModal(index) {
 
     // Object destructuring
     let {
-        name, dob, phone, email, location: { city, street, state, postcode }, picture } = employees[index];
+        name, dob, phone, email, location: { city, state, postcode }, picture } = employees[index];
 
     let date = new Date(dob.date);
 
@@ -97,4 +98,21 @@ modalNav.addEventListener('click', (e) => {
         index++;
     }
     displayModal(index);
+});
+
+// Search for employees
+searchBar.addEventListener("keyup", () => {
+    let searchName = searchBar.value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+    const names = document.querySelectorAll(".name");
+
+    cards.forEach((card, index) => {
+        let name = names[index].textContent.toLowerCase();
+
+        if (name.includes(searchName)) {
+            cards[index].style.display = "flex";
+        } else {
+            cards[index].style.display = "none";
+        }
+    });
 });

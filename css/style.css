@@ -346,11 +346,11 @@ template {
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .title,
@@ -376,7 +376,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 35px;
+  grid-gap: 2rem;
 }
 
 .overlay {
@@ -423,7 +423,7 @@ body {
 /* ============================================= */
 .card {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -456,8 +456,22 @@ body {
 }
 
 /* ============================================= */
-/*              Navigation                       */
+/*              Header                           */
 /* ============================================= */
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+#searchBar {
+  margin: 1rem 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 95%;
+}
+
 /* ============================================= */
 /*              Social                           */
 /* ============================================= */
@@ -471,10 +485,27 @@ body {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  #searchBar {
+    width: 50%;
+  }
 }
 @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  #searchBar {
+    width: 30%;
+    margin-left: 2rem;
   }
 }
 

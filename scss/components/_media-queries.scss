@@ -6,10 +6,23 @@
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    #searchBar {
+        width: 50%;
+    }
 }
 
 @media (min-width: $lg) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .header {
+        @include flexy($dir: row, $just: flex-start, $align: center);
+        margin: 2rem 0;
+    }
+    
+    #searchBar {
+        width: 30%;
+        margin-left: 2rem;
     }
 }

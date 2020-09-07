@@ -1,0 +1,16 @@
+/* ============================================= */
+/*              Header                           */
+/* ============================================= */
+
+.header {
+    @include flexy($dir: column);
+    margin: 2rem 0;
+}
+
+#searchBar {
+    margin: 1rem 0;
+    padding: 10px;
+    border: 1px solid $border;
+    border-radius: 5px;
+    width: 95%;
+}

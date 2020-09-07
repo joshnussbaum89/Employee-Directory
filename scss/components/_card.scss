@@ -3,7 +3,7 @@
 /* ============================================= */
 
 .card {
-    @include flexy($just: center);
+    @include flexy($just: flex-start);
     border: 1px solid $border;
     border-radius: 5px;
     padding: 10px;
