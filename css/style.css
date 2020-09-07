@@ -404,12 +404,26 @@ body {
   display: none;
 }
 
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-left,
+.modal-right {
+  color: #333333;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
 /* ============================================= */
 /*              Card                             */
 /* ============================================= */
 .card {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -438,6 +452,7 @@ body {
 /* ============================================= */
 .avatar {
   border-radius: 50%;
+  margin-right: 15px;
 }
 
 /* ============================================= */

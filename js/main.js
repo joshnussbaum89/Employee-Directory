@@ -8,7 +8,11 @@ const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture, email, 
 const gridContainer = document.querySelector('.grid-container');
 const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-content');
+const modalNav = document.querySelector('.modal-nav');
 const modalClose = document.querySelector('.modal-close');
+const modalLeft = document.querySelector('.modal-left');
+const modalRight = document.querySelector('.modal-right');
+let index = 0;
 
 // Fetch data from API
 fetch(urlAPI)
@@ -75,7 +79,6 @@ gridContainer.addEventListener('click', e => {
     if (e.target !== gridContainer) {
         const card = e.target.closest('.card');
         const index = card.getAttribute('data-index');
-
         displayModal(index);
     }
 
@@ -84,4 +87,14 @@ gridContainer.addEventListener('click', e => {
 // Close modal 
 modalClose.addEventListener('click', () => {
     overlay.classList.add('hidden');
+});
+
+// Scroll left and right 
+modalNav.addEventListener('click', (e) => {
+    if (e.target === modalLeft && parseInt(index) > 0) {
+        index--;
+    } else if (e.target === modalRight && parseInt(index) < 11) {
+        index++;
+    }
+    displayModal(index);
 });
