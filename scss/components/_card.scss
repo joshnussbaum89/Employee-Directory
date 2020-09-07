@@ -7,4 +7,9 @@
     border: 1px solid $border;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
+    transition: .2s;
+    &:hover {
+        box-shadow: 0 0 5px $dark-grey;
+    }
 }

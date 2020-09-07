@@ -4,7 +4,10 @@
 
 .modal-close {
     position: absolute;
+    color: $dark-text;
+    background-color: white;
     right: 15px;
     top: 5px;
+    border: none;
     cursor: pointer;
 }
