@@ -11,3 +11,16 @@
     border: none;
     cursor: pointer;
 }
+
+.modal-nav {
+    @include flexy($just: space-between);
+}
+
+.modal-left,
+.modal-right {
+    color: $dark-text;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+}

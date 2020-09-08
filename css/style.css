@@ -346,7 +346,7 @@ template {
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .name {
@@ -379,6 +379,23 @@ body {
   grid-gap: 2rem;
 }
 
+/* ============================================= */
+/*              Card                             */
+/* ============================================= */
+.card {
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card:hover {
+  border-radius: 0;
+  box-shadow: 4px 4px 0 #80e8d1;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -397,11 +414,24 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 30px 20px;
-  box-shadow: 0 0 10px #505050;
+  box-shadow: 0 0 10px #777;
 }
 
 .hidden {
   display: none;
+}
+
+/* ============================================= */
+/*              Button                           */
+/* ============================================= */
+.modal-close {
+  position: absolute;
+  color: #333333;
+  background-color: white;
+  right: 15px;
+  top: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .modal-nav {
@@ -416,35 +446,6 @@ body {
   border: none;
   cursor: pointer;
   font-size: 2rem;
-}
-
-/* ============================================= */
-/*              Card                             */
-/* ============================================= */
-.card {
-  display: flex;
-  justify-content: flex-start;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.card:hover {
-  box-shadow: 0 0 5px #505050;
-}
-
-/* ============================================= */
-/*              Button                           */
-/* ============================================= */
-.modal-close {
-  position: absolute;
-  color: #333333;
-  background-color: white;
-  right: 15px;
-  top: 5px;
-  border: none;
-  cursor: pointer;
 }
 
 /* ============================================= */
@@ -470,14 +471,14 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 95%;
+  transition: 0.2s;
+}
+#searchBar:focus {
+  border-radius: 0;
+  box-shadow: 4px 4px 0 #80e8d1;
+  outline: none;
 }
 
-/* ============================================= */
-/*              Social                           */
-/* ============================================= */
-/* ============================================= */
-/*              Members                          */
-/* ============================================= */
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */

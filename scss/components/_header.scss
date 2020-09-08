@@ -13,4 +13,10 @@
     border: 1px solid $border;
     border-radius: 5px;
     width: 95%;
+    transition: .2s;
+    &:focus {
+        border-radius: 0;
+        box-shadow: 4px 4px 0 $light-mint-green;
+        outline: none;
+    }
 }

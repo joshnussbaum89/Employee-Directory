@@ -10,6 +10,32 @@
     cursor: pointer;
     transition: .2s;
     &:hover {
-        box-shadow: 0 0 5px $dark-grey;
+        border-radius: 0;
+        box-shadow: 4px 4px 0 $light-mint-green;
     }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+    width: 375px;
+    margin: 8% auto;
+    position: relative;
+    text-align: center;
+    background: $white;
+    border: 1px solid $border;
+    border-radius: 5px;
+    padding: 30px 20px;
+    box-shadow: 0 0 10px $grey;
+}
+
+.hidden {
+    display: none;
 }
