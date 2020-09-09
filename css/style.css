@@ -362,7 +362,8 @@ template {
 .address,
 .phone-number,
 .birthday {
-  font-weight: 200;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 /* ============================================= */
