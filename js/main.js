@@ -104,13 +104,13 @@ searchBar.addEventListener("keyup", () => {
     const cards = document.querySelectorAll(".card");
     const names = document.querySelectorAll(".name");
 
-    cards.forEach((index) => {
-        let name = names[index].textContent.toLowerCase();
+    for (let i = 0; i < names.length; i++) {
+        let name = names[i].textContent.toLowerCase();
 
         if (name.includes(searchName)) {
-            cards[index].style.display = "flex";
+            cards[i].style.display = "flex";
         } else {
-            cards[index].style.display = "none";
+            cards[i].style.display = "none";
         }
-    });
+    }
 });
