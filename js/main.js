@@ -50,7 +50,7 @@ function displayEmployees(employeeData) {
 }
 
 function displayModal(index) {
-    // Object destructuring
+    //Object destructuring
     let {
         name, dob, phone, email, location: { city, state, postcode }, picture } = employees[index];
 
@@ -77,7 +77,7 @@ gridContainer.addEventListener('click', e => {
     if (e.target !== gridContainer) {
         const card = e.target.closest('.card');
         const indexNum = card.getAttribute('data-index');
-        index = indexNum
+        index = indexNum;
         displayModal(indexNum);
     }
 
@@ -104,7 +104,7 @@ searchBar.addEventListener("keyup", () => {
     const cards = document.querySelectorAll(".card");
     const names = document.querySelectorAll(".name");
 
-    cards.forEach((card, index) => {
+    cards.forEach((index) => {
         let name = names[index].textContent.toLowerCase();
 
         if (name.includes(searchName)) {
