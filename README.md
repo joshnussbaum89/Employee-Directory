@@ -1,2 +1,2 @@
 # Employee-Directory
-Unit-08
+Treehouse Unit-08 project
